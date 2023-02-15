@@ -5,7 +5,7 @@ import styles from "@/style";
 import Head from "next/head";
 import Image from "next/image";
 import { chison, discount, tokiobg } from "public/assets";
-import { Layout } from "./layout/Layout";
+import { Layout } from "../components/layout/Layout";
 
 export default function Home() {
 	return (
