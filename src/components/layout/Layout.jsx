@@ -1,6 +1,6 @@
 import { Footer, Navbar } from "@/components";
 import { React } from "react";
-export const Layout = ({ children }) => {
+ const Layout = ({ children }) => {
 	return (
 		<div className=" w-full overflow-hidden bg-primary  ">
 			<main>{children}</main>
@@ -10,3 +10,5 @@ export const Layout = ({ children }) => {
 		</div>
 	);
 };
+
+export default Layout;
