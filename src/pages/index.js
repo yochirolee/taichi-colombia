@@ -16,7 +16,6 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 			<Layout>
 				<div className="bg-hero ">
 					<div className="h-screen w-full bg-gradient-to-t lg:bg-gradient-to-b from-transparent to-gray-900/20">
