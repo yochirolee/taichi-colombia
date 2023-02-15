@@ -1,6 +1,6 @@
-import { Footer, Navbar } from "@/components";
+import { Footer } from "@/components";
 import { React } from "react";
- const Layout = ({ children }) => {
+const Layout = ({ children }) => {
 	return (
 		<div className=" w-full overflow-hidden bg-primary  ">
 			<main>{children}</main>
