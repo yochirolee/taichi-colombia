@@ -1,4 +1,4 @@
-import { Footer } from "@/components";
+import { Footer, Navbar } from "@/components";
 import { React } from "react";
 const Layout = ({ children }) => {
 	return (
