@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BsHeart } from "react-icons/bs";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 
@@ -24,7 +25,8 @@ const FeatureCard = ({ icon, title, content, index, color }) => (
 
 const ServiceCard = ({ icon, title, content, index, color }) => (
 	<div className="flex flex-row items-center gap-2 hover:border p-2 rounded-lg">
-		<span class={`flex w-3 h-3 ${color} animate-pulse rounded-full mx-4  ring-white ring-1`}></span>
+	    {icon}
+
 		<button>{title}</button>
 	</div>
 );

@@ -1,3 +1,4 @@
+import { BsBoxArrowDownRight, BsHeart } from "react-icons/bs";
 import {
 	people01,
 	people02,
@@ -37,35 +38,35 @@ export const navLinks = [
 export const features = [
 	{
 		id: "feature-1",
-		icon: star,
+		icon: <BsHeart />,
 		title: "Medicina Humana",
 		content: "The best credit cards offer some tantalizing combinations of promotions and prizes",
 		color: "bg-red-600",
 	},
 	{
 		id: "feature-2",
-		icon: shield,
+		icon: <BsBoxArrowDownRight />,
 		title: "Medicina Veterinaria",
 		content: "We take proactive steps make sure your information and transactions are secure.",
 		color: "bg-blue-500",
 	},
 	{
 		id: "feature-3",
-		icon: send,
+		icon: <BsHeart />,
 		title: "Odontologia",
 		content: "A balance transfer credit card can save you a lot of money in interest charges.",
 		color: "bg-green-500",
 	},
 	{
 		id: "feature-4",
-		icon: send,
+		icon: <BsHeart />,
 		title: "Simulacion",
 		content: "A balance transfer credit card can save you a lot of money in interest charges.",
 		color: "bg-yellow-600",
 	},
 	{
 		id: "feature-5",
-		icon: send,
+		icon: <BsHeart />,
 		title: "Soporte Tecnico",
 		content: "A balance transfer credit card can save you a lot of money in interest charges.",
 		color: "bg-orange-600",
