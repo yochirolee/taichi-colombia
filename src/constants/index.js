@@ -1,4 +1,4 @@
-import { BsBoxArrowDownRight, BsHeart } from "react-icons/bs";
+import { BsBoxArrowDownRight, BsHeart,BsInstagram,BsFacebook,BsLinkedin } from "react-icons/bs";
 import {
 	people01,
 	people02,
@@ -182,12 +182,13 @@ export const footerLinks = [
 export const socialMedia = [
 	{
 		id: "social-media-1",
-		icon: instagram,
+		icon: instagram ,
 		link: "https://www.instagram.com/taichi.colombia/",
 	},
 	{
 		id: "social-media-2",
 		icon: facebook,
+		color: "bg-blue-600",
 		link: "https://www.facebook.com/taichiholdingscolombia/",
 	},
 	{
