@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 import { close, logo, menu } from "../../public/assets";
@@ -10,7 +11,9 @@ const Navbar = () => {
 
 	return (
 		<nav className="w-full z-20   flex py-4 justify-between items-center ">
-			<Image src={logo} alt="taichi-logo" width={124} height={32} />
+			<Link href="/">
+				<Image src={logo} alt="taichi-logo" width={124} height={32} />
+			</Link>
 			<ul className="list-none sm:flex hidden justify-end items-center flex-1">
 				{navLinks.map((nav, index) => (
 					<li

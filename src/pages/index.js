@@ -17,15 +17,15 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<div className="bg-hero ">
-					<div className="h-screen w-full bg-gradient-to-t lg:bg-gradient-to-b from-transparent to-gray-900/20">
+				<div className="bg-hero relative ">
+					<div className=" w-full absolute h-screen bg-gradient-to-t lg:bg-gradient-to-b from-transparent to-gray-900/20 ">
 						<div className=" items-center text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
 							<Navbar />
-							<Hero />
-							<Business />
 						</div>
 					</div>
+				<Hero />
 				</div>
+				<Business />
 				<div className="bg-linear">
 					<div className=" items-center   text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
 						<Billing />
@@ -33,11 +33,7 @@ export default function Home() {
 					</div>
 				</div>
 				<Products />
-
-				<div className=" items-center text-center xl:max-w-[80%] my-20 mx-auto px-10 md:px-20">
-					<CTA />
-					<Testimonials />
-				</div>
+				
 			</Layout>
 		</>
 	);

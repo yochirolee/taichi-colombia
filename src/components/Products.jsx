@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { React, useState } from "react";
 import { chison, dentoncbct, discount, featuredbg, tokiobg } from "../../public/assets";
 import styles, { layout } from "../style";
@@ -73,7 +74,7 @@ export const Products = () => {
 					<div className="grid  sm:grid-cols-2 xl:px-40 items-center sm:mx-10 lg:px-30 py-10">
 						<div className="flex flex-col  items-center align-middle justify-center">
 							<Image
-								src={dentoncbct}
+								src={`https://drive.google.com/uc?export=view&id=1myRe7DIIlgMeXRqCB7AMnShhA8vlW5yK`}
 								alt=""
 								width={400}
 								height={400}
@@ -106,7 +107,7 @@ export const Products = () => {
 								Ipsum has been the
 							</span>
 							<div className="mt-6">
-								<Button />
+								<Link href="catalogo">Catalogo</Link>
 							</div>
 						</div>
 						{/* <div className="text-center mx-10 py-10 flex flex-col bg-gray-900/30 rounded-xl z-40">

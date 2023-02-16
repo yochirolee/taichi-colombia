@@ -8,6 +8,7 @@ const Catalogo = () => {
 				<Navbar />
 			</div>
             <Products/>
+			<div className="my-10 p-6">Categorias</div>
 		</Layout>
 	);
 };
