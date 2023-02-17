@@ -150,9 +150,8 @@ export const Products = () => {
 						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							
+							strokeWidth="2"
 							d="M15 19l-7-7 7-7"
 						></path>
 					</svg>
@@ -179,9 +178,9 @@ export const Products = () => {
 						xmlns="http://www.w3.org/2000/svg"
 					>
 						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
 							d="M9 5l7 7-7 7"
 						></path>
 					</svg>

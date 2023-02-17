@@ -1,10 +1,6 @@
-import { Billing, Business, CTA, Hero, Navbar, Products, Stats, Testimonials } from "@/components";
-import Button from "@/components/Button";
-import GetStarted from "@/components/GetStarted";
-import styles from "@/style";
+import { Billing, Business, Hero, Navbar, Products, Stats } from "@/components";
+
 import Head from "next/head";
-import Image from "next/image";
-import { chison, discount, tokiobg } from "public/assets";
 import Layout from "../components/layout/Layout";
 
 export default function Home() {
@@ -23,7 +19,7 @@ export default function Home() {
 							<Navbar />
 						</div>
 					</div>
-				<Hero />
+					<Hero />
 				</div>
 				<Business />
 				<div className="bg-linear">
@@ -33,7 +29,6 @@ export default function Home() {
 					</div>
 				</div>
 				<Products />
-				
 			</Layout>
 		</>
 	);
