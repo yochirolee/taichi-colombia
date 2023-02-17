@@ -21,12 +21,12 @@ const Hero = () => {
 					<div class="relative">
 						<p class="inline font-poppins font-semibold bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
 							Taichi
-							<span className="text-gradient mx-6  animate-pulse border rounded-lg   p-2 text-white font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[75px]">
+							<span className="text-gradient md:mx-6  animate-pulse border rounded-lg   p-2 text-white font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[75px]">
 								Holdings
 							</span>{" "}
 							Colombia.
 						</p>
-						<p class="mt-3  text-2xl tracking-tight text-white">
+						<p class="mt-10  text-2xl tracking-tight text-white">
 							Somos una compania especializada en el comercio Internacional de equipos y productos
 							medicos japoneses. Combinamos alta calidad con precios competitivos.
 						</p>
@@ -47,9 +47,9 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className="md:flex flex-col  text-center items-center align-middle justify-center">
-				<Image src={mapa} alt="" width={800} height={800} className="hidden md:block" />
+				<Image src={mapa} alt="" width={800} height={800} className="hidden mt-20 md:block" />
 				<div className="">
-					<span className="text-white text-center  font-bold text-xl">Nuestro Valores</span>
+					<span className="text-white text-center z font-bold text-xl">Nuestro Valores</span>
 					<div className="flex flex-row justify-center  flex-wrap gap-4 p-10">
 						<h1 className="text-3xl font-bold border-r pr-2 text-white">Amistad</h1>
 						<h1 className="text-3xl font-bold text-white border-r pr-2">Calidad</h1>
