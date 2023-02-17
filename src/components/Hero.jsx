@@ -6,9 +6,9 @@ import Link from "next/link";
 
 const Hero = () => {
 	return (
-		<div className="grid h-screen md:grid-cols-2 gap-10  xl:px-40 items-center sm:mx-10 lg:px-30 py-24 md:py-10">
-			<div className="flex flex-col gap-2 sm:gap-10 justify-center p-2 rounded-lg text-center">
-				<div class="relative z-10 text-center  ">
+		<div className="grid h-screen md:grid-cols-2 p-6 gap-10  xl:px-40 items-center sm:mx-10 lg:px-30 py-24 md:py-10">
+			<div className="flex flex-col gap-2  sm:gap-10 justify-center p-2 rounded-lg text-center">
+				<div class="relative mt-10 text-center  ">
 					<Image
 						alt=""
 						src={blurCyan}
