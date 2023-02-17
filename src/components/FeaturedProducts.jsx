@@ -1,11 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { React, useState } from "react";
-import { chison, dentoncbct, discount, featuredbg, tokiobg } from "../../public/assets";
-import styles, { layout } from "../style";
+import {
+	BsArrow90DegLeft,
+	BsArrowDownLeft,
+	BsArrowLeft,
+	BsArrowLeftCircle,
+	BsArrowRightCircle,
+	BsChatLeftDots,
+	BsChevronExpand,
+} from "react-icons/bs";
+import { chison, discount } from "../../public/assets";
+import styles from "../style";
 import Button from "./Button";
 
-export const Products = () => {
+export const FeaturedProducts = () => {
 	const [activeProduct, setActiveProduct] = useState(1);
 	console.log(activeProduct, "active");
 	return (
@@ -101,32 +110,21 @@ export const Products = () => {
 							</div>
 
 							<span
-								className={`${styles.paragraph}  mx-auto max-w-[470px] mt-5 text-white text-center `}
+								className={`${styles.paragraph}   mx-auto max-w-[470px] mt-5 text-white text-center `}
 							>
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 								Ipsum has been the
 							</span>
 							<div className="mt-6">
-								<Link href="catalogo">Catalogo</Link>
+								<Link
+									href="catalogo"
+									className="border py-4 px-6 text-white font-bold hover:bg-gray-50/20  rounded-lg font-poppins"
+								>
+									Catalogo
+								</Link>
 							</div>
 						</div>
-						{/* <div className="text-center mx-10 py-10 flex flex-col bg-gray-900/30 rounded-xl z-40">
-							<span
-								className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-							>
-								Fecuencia Base: 2.5 MHz
-							</span>
-							<span
-								className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-							>
-								Modos: B, C, PW, M, CPA, DPD, 2B
-							</span>
-							<span
-								className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-							>
-								Auto EF - IMT- PW -AutoTrace
-							</span>
-						</div> */}
+					
 					</div>
 				</div>
 			</div>
@@ -137,26 +135,10 @@ export const Products = () => {
 					})
 				}
 				type="button"
-				class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+				className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
 				data-carousel-prev
 			>
-				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-					<svg
-						aria-hidden="true"
-						class="w-6 h-6 text-white dark:text-gray-800"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							
-							strokeWidth="2"
-							d="M15 19l-7-7 7-7"
-						></path>
-					</svg>
-					<span class="sr-only">Previous</span>
-				</span>
+				<BsArrowLeftCircle className="text-3xl text-gray-100/40 hover:text-white" />
 			</button>
 			<button
 				onClick={() =>
@@ -165,27 +147,10 @@ export const Products = () => {
 					})
 				}
 				type="button"
-				class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+				className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
 				data-carousel-next
 			>
-				<span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white  group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-					<svg
-						aria-hidden="true"
-						class="w-6 h-6 text-white dark:text-gray-800"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth="2"
-							d="M9 5l7 7-7 7"
-						></path>
-					</svg>
-					<span class="sr-only">Next</span>
-				</span>
+				<BsArrowRightCircle className="text-3xl text-gray-100/40 hover:text-white" />
 			</button>
 		</div>
 	);

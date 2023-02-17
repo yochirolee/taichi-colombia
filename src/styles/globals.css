@@ -10,7 +10,7 @@
 	scroll-behavior: smooth;
 }
 .bg-linear{
-	background: linear-gradient(180deg, rgba(6, 85, 131, 0.329) 0%, #061F27 100%);
+	background: linear-gradient(180deg, rgba(6, 85, 131, 0.329) 0%, #0d5269 100%);
 }
 .bg-featured {
 	background-image: url("../../public/assets/featuredbg.webp");

@@ -1,6 +1,8 @@
-import { Billing, Business, Hero, Navbar, Products, Stats } from "@/components";
+import { Billing, Business, Hero, Navbar, FeaturedProducts, Stats } from "@/components";
 
 import Head from "next/head";
+import Image from "next/image";
+import { blurCyan } from "public/assets";
 import Layout from "../components/layout/Layout";
 
 export default function Home() {
@@ -13,22 +15,68 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<div className="bg-hero relative ">
-					<div className=" w-full absolute h-screen bg-gradient-to-t lg:bg-gradient-to-b from-transparent to-gray-900/20 ">
+				<div className=" relative bg-hero  ">
+					<div className=" w-full absolute h-screen   bg-gradient-to-b from-transparent to-gray-900/50 ">
 						<div className=" items-center text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
 							<Navbar />
 						</div>
 					</div>
+					<Image
+									alt=""
+									src={blurCyan}
+									width={530}
+									height={530}
+									decoding="async"
+									data-nimg="1"
+									class="absolute bottom-full top-40 right-10 -mb-56 opacity-50"
+								/>
 					<Hero />
 				</div>
 				<Business />
 				<div className="bg-linear">
-					<div className=" items-center   text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
-						<Billing />
+					<div className=" items-center p-20 flex flex-col gap-10  text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
+						<div class="mx-auto grid   justify-center items-center gap-y-16 gap-x-8 px-4">
+							<div class="relative z-10 md:text-center lg:text-left">
+								<Image
+									alt=""
+									src={blurCyan}
+									width={530}
+									height={530}
+									decoding="async"
+									data-nimg="1"
+									class="absolute bottom-full right-full -mr-72 -mb-56 opacity-50"
+								/>
+								<div class="relative">
+									<p class="inline font-poppins font-semibold bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+										Taichi Holdings Colombia.
+									</p>
+									<p class="mt-3 text-2xl tracking-tight text-slate-400">
+										Poseemos un amplio catalogo de productos.
+									</p>
+									<div class="mt-8 flex gap-4 md:justify-center lg:justify-start">
+										<a
+											class="rounded-full bg-sky-300 py-2 px-4 text-sm font-semibold text-slate-900 hover:bg-sky-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300/50 active:bg-sky-500"
+											href="/"
+										>
+											Get started
+										</a>
+										<a
+											class="rounded-full bg-slate-800 py-2 px-4 text-sm font-medium text-white hover:bg-slate-700 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50 active:text-slate-400"
+											href="/"
+										>
+											View on GitHub
+										</a>
+									</div>
+								</div>
+								<div class="relative lg:static xl:pl-10">
+									<div class="absolute inset-x-[-50vw] -top-32 -bottom-48 [mask-image:linear-gradient(transparent,white,white)] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:left-[calc(50%+14rem)] lg:right-0 lg:-top-32 lg:-bottom-32 lg:[mask-image:none] lg:dark:[mask-image:linear-gradient(white,white,transparent)]"></div>
+								</div>
+							</div>
+						</div>
 						<Stats />
 					</div>
+					<FeaturedProducts />
 				</div>
-				<Products />
 			</Layout>
 		</>
 	);

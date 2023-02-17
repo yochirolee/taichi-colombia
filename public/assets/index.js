@@ -28,6 +28,7 @@ import tokiobg from "./tokiobg.webp";
 import featuredbg from "./featuredbg.png";
 import chison from "./chison.png";
 import dentoncbct from "./denton-cbct.png";
+import blurCyan from './blur-cyan.png';
 
 export {
 	airbnb,
@@ -60,4 +61,5 @@ export {
 	featuredbg,
 	chison,
 	dentoncbct,
+	blurCyan,
 };

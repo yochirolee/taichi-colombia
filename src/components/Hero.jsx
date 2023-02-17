@@ -1,84 +1,63 @@
 import styles from "../style";
-import { mapa } from "../../public/assets";
+import { blurCyan, mapa } from "../../public/assets";
 import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
 	return (
-		<div className="grid h-screen sm:grid-cols-2 xl:px-40 items-center sm:mx-10 lg:px-30 py-24 md:py-10">
-			<div className="flex flex-col gap-2 sm:gap-10 justify-center text-center">
-				<h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-					Taichi <br className="sm:block hidden" />{" "}
-					<span className="text-gradient  animate-pulse border rounded-lg   p-2 text-white font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[75px]">
-						Holdings
-					</span>
-				</h1>
-				<h1 className="font-poppins  font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-					Colombia.
-				</h1>
-			</div>
-			<div className="flex flex-col  items-center align-middle justify-center">
-				<Image src={mapa} alt="" width={400} height={400} className='hidden sm:block' />
-				<span className=" flex  items-center gap-4 mt-10 px-6  py-2 sm:mt-6 bg-gray-100/50  rounded-xl ">
-					<p
-						className={`${styles.paragraph} text-gray-700 font-semibold  mx-auto max-w-[470px]   text-center `}
-					>
-								Tecnologia Japonesa al servicio de la Gran Colombia
-			
-					</p>
-				</span>
-			
-			</div>
-
-			{/* <div className="text-center mx-10 py-10 flex flex-col bg-gray-900/30 rounded-xl z-40">
-						<span
-							className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-						>
-							Fecuencia Base: 2.5 MHz
-						</span>
-						<span
-							className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-						>
-							Modos: B, C, PW, M, CPA, DPD, 2B
-						</span>
-						<span
-							className={`${styles.paragraph} hidden lg:block  mx-auto max-w-[470px] mt-5 text-white text-center `}
-						>
-							Auto EF - IMT- PW -AutoTrace
-						</span>
-					</div> */}
-		</div>
-
-		/* <section id="home" className="relative flex md:flex-row flex-col pb-20  ">
-			<div className={`flex-1 flex-col text-left z-20  `}>
-				<div className="flex flex-row items-start w-full mt-20">
-					<h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100.8px] leading-[75px]">
-						Taichi <br className="sm:block hidden" />{" "}
-						<span className="text-gradient">Holdings</span>{" "}
-					</h1>
-					<div className="ss:flex hidden md:mr-4 mr-0"></div>
+		<div className="grid h-screen md:grid-cols-2 gap-10  xl:px-40 items-center sm:mx-10 lg:px-30 py-24 md:py-10">
+			<div className="flex flex-col gap-2 sm:gap-10 justify-center p-2 rounded-lg text-center">
+				<div class="relative z-10 text-center  ">
+					<Image
+						alt=""
+						src={blurCyan}
+						width={530}
+						height={530}
+						decoding="async"
+						data-nimg="1"
+						class="absolute bottom-full right-full -mr-72 -mb-56 opacity-50"
+					/>
+					<div class="relative">
+						<p class="inline font-poppins font-semibold bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+							Taichi
+							<span className="text-gradient mx-6  animate-pulse border rounded-lg   p-2 text-white font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[75px]">
+								Holdings
+							</span>{" "}
+							Colombia.
+						</p>
+						<p class="mt-3  text-2xl tracking-tight text-white">
+							Somos una compania especializada en el comercio Internacional de equipos y productos
+							medicos japoneses. Combinamos alta calidad con precios competitivos.
+						</p>
+						<div class="mt-8 items-center  flex gap-4 justify-center ">
+							<div className="mt-6">
+								<Link
+									href="catalogo"
+									className="border  py-4 px-10 text-white font-bold hover:bg-gray-50/20  rounded-lg font-poppins"
+								>
+									Conozca Nuestro Catalogo
+								</Link>
+							</div>
+						</div>
+					</div>
+					<div class="relative lg:static xl:pl-10">
+						<div class="absolute inset-x-[-50vw] -top-32 -bottom-48 [mask-image:linear-gradient(transparent,white,white)] dark:[mask-image:linear-gradient(transparent,white,transparent)] lg:left-[calc(50%+14rem)] lg:right-0 lg:-top-32 lg:-bottom-32 lg:[mask-image:none] lg:dark:[mask-image:linear-gradient(white,white,transparent)]"></div>
+					</div>
 				</div>
-
-				<h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100.8px] leading-[75px] w-full">
-					Colombia.
-				</h1>
-				<p
-					className={`${styles.paragraph} hidden sm:block w-full sm:max-w-[470px] mt-5 text-white p-4 bg-gray-900/60 rounded-lg`}
-				>
-					Somos una compañía trasnacional japonesa especializada en el comercio internacional,
-					enfocada en brindar soluciones médicas en diferentes áreas, con productos de alta
-					tecnología y un amplio portafolio al servicio de Colombia y el mundo
-				</p>
 			</div>
-
-			<div
-				className={`flex-1 pt-10 items-center hidden justify-center  md:flex flex-col    md:my-0 my-20 mx-10 relative`}
-			>
-				
-					<Image src={mapa} alt="map" className="" width={600} height={800} />
-				
+			<div className="md:flex flex-col  text-center items-center align-middle justify-center">
+				<Image src={mapa} alt="" width={800} height={800} className="hidden md:block" />
+				<div className="">
+					<span className="text-white text-center  font-bold text-xl">Nuestro Valores</span>
+					<div className="flex flex-row justify-center  flex-wrap gap-4 p-10">
+						<h1 className="text-3xl font-bold border-r pr-2 text-white">Amistad</h1>
+						<h1 className="text-3xl font-bold text-white border-r pr-2">Calidad</h1>
+						<h1 className="text-3xl font-bold text-white">Compromiso</h1>
+					</div>
+				</div>
 			</div>
-		</section> */
+		</div>
 	);
 };
 
