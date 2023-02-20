@@ -33,9 +33,14 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className="md:flex flex-col    text-center items-center align-middle justify-center">
-				<Image src={mapa} alt="" width={800} height={800} className=" rounded-full animate-pulse mt-20 " />
+				<Image
+					src={mapa}
+					alt=""
+					width={800}
+					height={800}
+					className=" rounded-full animate-pulse mt-20 "
+				/>
 				<div className="">
-					<span className="text-white text-center  font-bold text-xl">Nuestro Valores</span>
 					<div className="flex flex-row justify-center  flex-wrap gap-4 p-10">
 						<h1 className="text-xl font-bold border-r pr-2 text-white">Amistad</h1>
 						<h1 className="text-xl font-bold text-white border-r pr-2">Calidad</h1>
