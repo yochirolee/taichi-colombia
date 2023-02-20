@@ -9,7 +9,7 @@
 * {
 	scroll-behavior: smooth;
 }
-.bg-linear{
+.bg-linear {
 	background: linear-gradient(180deg, rgba(6, 85, 131, 0.329) 0%, #0d5269 100%);
 }
 .bg-featured {
@@ -21,10 +21,25 @@
 	background-image: url("../../public/assets/tokiobg.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
-	
 }
 
+.bg-medical {
+	background: #344a5f;
+}
 
+.bg-veterinary {
+	background: #20754c;
+}
+
+.bg-support {
+	background: #a09636;
+}
+.bg-odontology {
+	background: #1c7e9b;
+}
+.bg-simulation {
+	background: #8a24a4;
+}
 
 .text-gradient {
 	background: radial-gradient(

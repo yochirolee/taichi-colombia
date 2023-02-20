@@ -5,6 +5,8 @@ import Image from "next/image";
 import { blurCyan } from "public/assets";
 import Layout from "../components/layout/Layout";
 import { FeaturedCard } from "@/components/FeatureCard";
+import { Services } from "@/components/Services";
+import { About } from "@/components/About";
 
 export default function Home() {
 	return (
@@ -38,14 +40,12 @@ export default function Home() {
 				</div>
 
 				<Hero />
-				<Business />
-				<div className="bg-gray-900/40 rounded-lg p-10">
-					<Billing />
-				</div>
+
 				<FeaturedProducts />
-				<FeaturedCard />
-				<Clients />
-				<CardDeal />
+				<Services />
+				<About />
+
+				<Billing />
 			</Layout>
 		</div>
 	);

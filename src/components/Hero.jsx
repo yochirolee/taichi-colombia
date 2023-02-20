@@ -3,26 +3,24 @@ import Link from "next/link";
 import { React, useState } from "react";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { chison, discount, mapa, tokiobg } from "../../public/assets";
-import styles from "../style";
-import Button from "./Button";
 
 const Hero = () => {
-	const [activeProduct, setActiveProduct] = useState(1);
-	console.log(activeProduct, "active");
-	return (
+		return (
 		<div id="controls-carousel" class="relative" data-carousel="static">
+		
 			<div class="relative bg-transparent  overflow-hidden rounded-t-lg ">
+               
 				<div className="grid  sm:grid-cols-2 mx-auto  items-center gap-10  mt-10 mb-28">
 					<div className="flex flex-col ml-6 gap-2  justify-center text-center">
 						<div class="relative">
-							<p class="inline text-left font-poppins font-semibold bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+							<p class="inline text-left font-poppins font-semibold bg-gradient-to-r p-2 from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
 								Taichi
 								<span className="text-gradient mx-2  animate-pulse  rounded-lg   p-2 text-white font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[75px]">
 									Holdings
 								</span>{" "}
 								Colombia.
 							</p>
-							<p class="mt-10 px-10 text-xl text-left tracking-tight text-white">
+							<p class="mt-10 md:px-10 text-xl text-left tracking-tight text-white">
 								Somos una compania especializada en el comercio Internacional de equipos y productos
 								medicos japoneses. Combinamos alta calidad con precios competitivos.
 							</p>
