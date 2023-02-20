@@ -10,14 +10,8 @@ import { blurCyan } from "../../../../public/assets";
 const Product = ({ productData }) => {
 	return (
 		<Layout>
-			<div className=" items-center text-center xl:max-w-[80%]  mx-auto px-10 md:px-20">
-				<Navbar />
-			</div>
-			<div class=" font-poppins bg-primary">
-				
-				<div className="bg-white">
-					<ProductDetails productData={productData} />
-				</div>
+			<div className="">
+				<ProductDetails productData={productData} />
 			</div>
 		</Layout>
 	);
