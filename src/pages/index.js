@@ -39,7 +39,6 @@ export default function Home() {
 					/>
 
 					<Hero />
-
 					<FeaturedProducts />
 					<Services />
 					<About />

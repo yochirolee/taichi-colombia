@@ -5,12 +5,13 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { chison, discount, mapa, tokiobg } from "../../public/assets";
 import styles from "../style";
 import Button from "./Button";
+import Navbar from "./Navbar";
 
 export const FeaturedProducts = () => {
 	const [activeProduct, setActiveProduct] = useState(1);
 	console.log(activeProduct, "active");
 	return (
-		<div class="relative isolate overflow-hidden rounded-t-xl bg-linear py-6 sm:py-10">
+		<div class="relative isolate overflow-hidden bg-linear lg:rounded-t-xl  py-6 sm:py-10">
 			<svg
 				viewBox="0 0 1097 845"
 				aria-hidden="true"

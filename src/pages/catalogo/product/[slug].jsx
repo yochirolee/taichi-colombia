@@ -19,7 +19,6 @@ const Product = ({ productData }) => {
 
 export const getStaticPaths = async () => {
 	const paths = getAllProductsIds();
-	console.log(paths, "paths");
 
 	return {
 		paths,

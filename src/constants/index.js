@@ -115,68 +115,35 @@ export const stats = [
 
 export const footerLinks = [
 	{
-		title: "Useful Links",
+		title: "Datos de Contacto",
 		links: [
 			{
-				name: "Content",
-				link: "#",
+				name: "Direccion: Cra. 15 No. 93A-62 OF: 304-305 | Bogota, Colombia",
+				link: "/",
 			},
 			{
-				name: "How it Works",
-				link: "#",
+				name: "Telefono: +57 (601)-627-2586",
+				link: "",
 			},
 			{
-				name: "Create",
+				name: "Email: taichi-colombia@anabas.co.jp",
 				link: "#",
 			},
-			{
-				name: "Explore",
-				link: "#",
-			},
-			{
-				name: "Terms & Services",
-				link: "#",
-			},
+		
 		],
 	},
 	{
-		title: "Community",
+		title: "Casa Matriz",
 		links: [
 			{
-				name: "Help Center",
-				link: "#",
+				name: "Taichi Holdings SAS",
+				link: "https://www.taichi-holdings.com/es/",
 			},
-			{
-				name: "Partners",
-				link: "#",
-			},
-			{
-				name: "Suggestions",
-				link: "#",
-			},
-			{
-				name: "Blog",
-				link: "#",
-			},
-			{
-				name: "Newsletters",
-				link: "#",
-			},
+			
+			
 		],
 	},
-	{
-		title: "Partner",
-		links: [
-			{
-				name: "Our Partner",
-				link: "#",
-			},
-			{
-				name: "Become a Partner",
-				link: "#",
-			},
-		],
-	},
+
 ];
 
 export const socialMedia = [

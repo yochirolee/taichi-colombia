@@ -24,6 +24,7 @@ const Footer = () => (
 							{footerlink.links.map((link, index) => (
 								<li
 									key={link.name}
+									onClick={() => window.open(link.link)}
 									className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
 										index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
 									}`}
@@ -37,7 +38,7 @@ const Footer = () => (
 			</div>
 		</div>
 
-		<div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3F3E45]">
+		<div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#ffffff1c]">
 			<p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-white">
 				Copyright Ⓒ 2023 Taichi Colombia. All Rights Reserved.
 			</p>
