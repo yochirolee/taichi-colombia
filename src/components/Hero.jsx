@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { React, useState } from "react";
-import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
-import { chison, discount, mapa, tokiobg } from "../../public/assets";
+import { React } from "react";
+import {  mapa } from "../../public/assets";
 
 const Hero = () => {
 	return (

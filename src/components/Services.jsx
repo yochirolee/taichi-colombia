@@ -1,18 +1,17 @@
 import { React } from "react";
-import {FaDog, FaNotesMedical, FaTooth, FaUserShield} from "react-icons/fa"
-import {MdSupport} from "react-icons/md"
+import { FaDog, FaNotesMedical, FaTooth, FaUserShield } from "react-icons/fa";
+import { MdSupport } from "react-icons/md";
 
 export const Services = () => {
 	return (
 		<div class="bg-white py-24 sm:py-32 ">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-2xl lg:text-center">
-					
 					<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 						Nuestros Servicios
 					</p>
 					<p class="mt-6 text-lg leading-8 text-gray-600">
-						Taichi Holdings Colombia tiene como mision ayudar al desarrolo.
+						Taichi Holdings Colombia tiene como mision ayudar al desarrolo de Colombia.
 					</p>
 				</div>
 				<div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -25,33 +24,41 @@ export const Services = () => {
 								Medicina Humana
 							</dt>
 							<dd class="mt-2 text-base leading-7 text-gray-600">
-								Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.
-								Odio urna massa nunc massa.
+								La medicina humana es una disciplina que se enfoca en el estudio, diagnóstico y
+								tratamiento de enfermedades y trastornos en seres humanos. Los equipos de
+								diagnóstico son herramientas esenciales en este campo, ya que permiten a los
+								profesionales de la salud obtener información precisa sobre la salud de sus
+								pacientes, lo que es crucial para ofrecer un tratamiento efectivo y personalizado.
+								Taichi cuenta con una amplia gamas de equipos de ultima generacion  y de excelente calidad
 							</dd>
 						</div>
 
 						<div class="relative pl-16">
 							<dt class="text-base font-semibold leading-7 text-gray-900">
 								<div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-veterinary">
-									<FaDog className="h-6 w-6 text-white"/>
+									<FaDog className="h-6 w-6 text-white" />
 								</div>
 								Veterinaria
 							</dt>
 							<dd class="mt-2 text-base leading-7 text-gray-600">
-								Contamos con equipamiento especializado en veterinaria y tenemos un equipo de ingenieros con mas de 10 años de experiencia en el sector.  
+								Nuestros equipos cuentan con gran calidad y respaldo brindando soluciones no solo en
+								su instalacion si no en la implementacion de proyectos de gran tamaño como lo son
+								los centros de imagenes diagnósticas especializadas en medicina veterinaria.
 							</dd>
 						</div>
 
 						<div class="relative pl-16">
 							<dt class="text-base font-semibold leading-7 text-gray-900">
 								<div class="absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg bg-odontology">
-								<FaTooth className="h-6 w-6 text-white"/>
+									<FaTooth className="h-6 w-6 text-white" />
 								</div>
 								Odontologia
 							</dt>
 							<dd class="mt-2 text-base leading-7 text-gray-600">
-								Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor
-								congue commodo diam neque.
+								Los equipos odontológicos son esenciales para el trabajo de los profesionales de la
+								salud bucal, permitiendo llevar a cabo procedimientos de manera precisa y eficiente,
+								mejorando la calidad de atención que se ofrece a los pacientes, Taichi posee equipos
+								de ultima generacion a precios competitivos en el mercado.
 							</dd>
 						</div>
 
@@ -63,8 +70,9 @@ export const Services = () => {
 								Soporte Tecnico
 							</dt>
 							<dd class="mt-2 text-base leading-7 text-gray-600">
-								Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis.
-								Id hac maecenas ac donec pharetra eget.
+								Contamos con ingenieros altamente calificados para ofrecerles soluciones y
+								recomendaciones para mejorar su desempeño. Nuestros ingenieros pueden ayudarlo a
+								instalar, configurar y mantener adecuadamente su tecnologia medica.
 							</dd>
 						</div>
 						<div class="relative pl-16">
@@ -75,8 +83,10 @@ export const Services = () => {
 								Simulacion
 							</dt>
 							<dd class="mt-2 text-base leading-7 text-gray-600">
-								Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis.
-								Id hac maecenas ac donec pharetra eget.
+								La simulación médica es una técnica cada vez más utilizada en la formación de
+								profesionales de la salud, debido a sus numerosas bondades y ventajas. En esta
+								técnica, se recrean situaciones y escenarios clínicos mediante la utilización de
+								maniquíes, simuladores y tecnología de última generación
 							</dd>
 						</div>
 					</dl>
