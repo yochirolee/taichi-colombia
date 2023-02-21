@@ -18,8 +18,8 @@ export const FeaturedCard = () => {
 				/>
 				<defs>
 					<radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-						<stopColor stopColorColor="#fff" />
-						<stopColor offset="1" stopColor-color="#fff" />
+						<stopColor stopColor="#fff" />
+						<stopColor offset="1" stopColor="#fff" />
 					</radialGradient>
 				</defs>
 			</svg>
