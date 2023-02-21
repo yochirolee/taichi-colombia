@@ -16,7 +16,7 @@ export const ProductCard = ({ product }) => {
 			</div>
 			<p class="mt-1 text-sm text-white rounded-lg p-2 text-center bg-medical ">{product.category}</p>
 			<h3 class="mt-4 text-lg font-medium text-gray-900 ">{product.name}</h3>
-			<p class="mt-1 text-sm text-gray-700 ">{product.description}</p>
+			<p class="mt-1 text-sm text-gray-700 ">{product.categories.categoryName}</p>
 		</Link>
 	);
 };

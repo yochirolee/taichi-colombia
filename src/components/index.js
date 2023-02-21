@@ -9,6 +9,9 @@ import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import { FeaturedProducts } from "./FeaturedProducts";
+import { NewCategoryForm } from "./forms/NewCategoryForm";
+import { NewLineForm } from "./forms/NewLineForm";
+import { NewProductForm } from "./forms/newProductForm";
 
 export {
 	Navbar,
@@ -22,4 +25,7 @@ export {
 	Testimonials,
 	Hero,
 	FeaturedProducts,
+	NewCategoryForm,
+	NewLineForm,
+	NewProductForm,
 };

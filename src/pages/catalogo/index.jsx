@@ -1,4 +1,4 @@
-import { FeaturedProducts, Navbar } from "@/components";
+import { FeaturedProducts } from "@/components";
 import { getAllProductsData } from "../../constants/products_Catalog";
 import Layout from "@/components/layout/Layout";
 import { React } from "react";
@@ -7,7 +7,6 @@ import { ProductCard } from "@/components/products/ProductCard";
 const Catalogo = ({ productsList }) => {
 	return (
 		<Layout>
-			
 			<FeaturedProducts />
 
 			<div class="bg-white  rounded-b-xl">
@@ -23,15 +22,14 @@ const Catalogo = ({ productsList }) => {
 					</div>
 				</div>
 
-				<div class="grid grid-cols-1 gap-y-10 px-6 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-					  
-				</div>
+				<div class="grid grid-cols-1 gap-y-10 px-6 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"></div>
 			</div>
 		</Layout>
 	);
 };
 export async function getStaticProps() {
-	const productsList = getAllProductsData();
+	let  productsList  = await getAllProductsData();
+	console.log(productsList, "products");
 	return {
 		props: {
 			productsList,

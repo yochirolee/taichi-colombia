@@ -5,11 +5,11 @@ import { getAllProductsIds, getProductData } from "@/constants/products_Catalog"
 import Image from "next/image";
 import Link from "next/link";
 import { React } from "react";
-import { blurCyan } from "../../../../public/assets";
 
 const Product = ({ productData }) => {
 	return (
 		<Layout>
+			<blurCyan />
 			<div className="">
 				<ProductDetails productData={productData} />
 			</div>
@@ -18,7 +18,7 @@ const Product = ({ productData }) => {
 };
 
 export const getStaticPaths = async () => {
-	const paths = getAllProductsIds();
+	const paths = await getAllProductsIds();
 
 	return {
 		paths,
@@ -27,7 +27,9 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps({ params }) {
-	const productData = getProductData(params.slug);
+	const productData = await getProductData(params.slug);
+	
+	console.log(getProductData)
 	return {
 		props: {
 			productData,

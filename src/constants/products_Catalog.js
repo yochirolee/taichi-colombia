@@ -1,4 +1,6 @@
-export const products = [
+import { supabase } from "@/lib/supabaseClient";
+
+export const productsListOld = [
 	{
 		id: 0,
 		name: "ASR-4000E",
@@ -78,7 +80,8 @@ export const products = [
 	},
 ];
 
-export const getAllProductsIds = () => {
+export const getAllProductsIds = async () => {
+	const { data: products } = await supabase.from("products").select("*");
 	return products.map((product) => {
 		return {
 			params: {
@@ -88,12 +91,17 @@ export const getAllProductsIds = () => {
 	});
 };
 
-export const getProductData = (slug) => {
-	console.log(slug);
-	let result = products.find((product) => product.slug == slug);
-	return result;
+export const getProductData = async (slug) => {
+	let { data: productData } = await supabase
+		.from("products")
+		.select("*,categories(*)")
+		.eq("slug", slug)
+		.single();
+	return productData;
 };
 
-export const getAllProductsData = () => {
+export const getAllProductsData = async () => {
+	let { data: products, error } = await supabase.from("products").select("*,categories(*)");
+	console.log(products, error, "roducts");
 	return products;
 };

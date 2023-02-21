@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
 	content: [
 		"./app/**/*.{js,ts,jsx,tsx}",
@@ -30,5 +31,5 @@ module.exports = {
 			xl: "1700px",
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/forms")],
 };
