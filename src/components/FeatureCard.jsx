@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { blurCyan, chison, mapa } from "public/assets";
+import { mapa } from "public/assets";
 import { React } from "react";
 export const FeaturedCard = () => {
 	return (

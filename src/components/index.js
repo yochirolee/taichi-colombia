@@ -11,7 +11,7 @@ import Hero from "./Hero";
 import { FeaturedProducts } from "./FeaturedProducts";
 import { NewCategoryForm } from "./forms/NewCategoryForm";
 import { NewLineForm } from "./forms/NewLineForm";
-import { NewProductForm } from "./forms/newProductForm";
+import { NewProductForm } from "./forms/NewProductForm";
 
 export {
 	Navbar,
