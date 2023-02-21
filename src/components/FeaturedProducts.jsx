@@ -31,8 +31,8 @@ export const FeaturedProducts = () => {
 						y2="363.075"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stopColor stopColor-color="#776FFF" />
-						<stopColor offset="1" stopColor-color="#FF4694" />
+						<stop stopColor="#776FFF" />
+						<stop offset="1" stopColor-color="#FF4694" />
 					</linearGradient>
 				</defs>
 			</svg>
@@ -55,8 +55,8 @@ export const FeaturedProducts = () => {
 						y2="363.075"
 						gradientUnits="userSpaceOnUse"
 					>
-						<stopColor stopColor-color="#776FFF" />
-						<stopColor offset="1" stopColor-color="#FF4694" />
+						<stop stopColor-color="#776FFF" />
+						<stop offset="1" stopColor-color="#FF4694" />
 					</linearGradient>
 				</defs>
 			</svg>
