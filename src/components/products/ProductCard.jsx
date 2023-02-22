@@ -11,7 +11,7 @@ export const ProductCard = ({ product }) => {
 					src={product.image}
 					width={500}
 					height={500}
-					alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+					alt={product.name}
 					className="max-h-72 w-full object-top object-scale-down group-hover:opacity-75"
 				/>
 			</div>
