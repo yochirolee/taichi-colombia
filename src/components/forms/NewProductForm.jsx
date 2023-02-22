@@ -1,4 +1,41 @@
+import { supabase } from "@/lib/supabaseClient";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+const initialState = {
+	name: "",
+	brand: "",
+	description: "",
+	price: 0,
+	model: "",
+	stock: 0,
+	image: "",
+	slug: "",
+};
+
+const createNewProduct = async (newProduct) => {
+	const { data, error } = await supabase.from("products").insert([newProduct]);
+	console.log(data, error);
+};
+
 export const NewProductForm = ({ categories, subcategories }) => {
+	const {
+		register,
+		handleSubmit,
+		watch,
+		formState: { errors },
+	} = useForm();
+
+	const onSubmit = async (data) => {
+		data.slug = data.name;
+		await createNewProduct(data);
+	};
+
+	/* 	const handleSubmit = async (e) => {
+		e.preventDefault();
+		await createNewProduct(newProduct);
+	}; */
+
 	return (
 		<div className=" p-6  lg:rounded-xl b">
 			<div className="mt-10 sm:mt-0">
@@ -14,22 +51,20 @@ export const NewProductForm = ({ categories, subcategories }) => {
 						</div>
 					</div>
 					<div className="mt-5 md:col-span-2 md:mt-0">
-						<form action="#" method="POST">
+						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="overflow-hidden shadow sm:rounded-md">
 								<div className="bg-white px-4 py-5 sm:p-6">
 									<div className="grid grid-cols-6 gap-6">
 										<div className="col-span-6 sm:col-span-3">
 											<label htmlFor="country" className="block text-sm font-medium text-gray-700">
-												Categorias
+												Lineas de Taichi
 											</label>
 											<select
-												id="subcategories"
-												name="subcategories"
-												autoComplete="categories-name"
+												{...register("subCategoryId")}
 												className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
 											>
 												{subcategories?.map((subcategory) => (
-													<option key={subcategory.id}>{subcategory.name}</option>
+													<option value={subcategory.subCategoryId}>{subcategory.name}</option>
 												))}
 											</select>
 										</div>
@@ -38,29 +73,25 @@ export const NewProductForm = ({ categories, subcategories }) => {
 												Categorias
 											</label>
 											<select
-												id="categories"
-												name="categories"
-												autoComplete="categories-name"
+												{...register("categoryId")}
 												className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
 											>
 												{categories?.map((category) => (
-													<option key={category.CategoryId}>{category.CategoryName}</option>
+													<option value={category.categoryId}>{category.categoryName}</option>
 												))}
 											</select>
 										</div>
 
 										<div className="col-span-6 sm:col-span-3">
-											<label
-												htmlFor="first-name"
-												className="block text-sm font-medium text-gray-700"
-											>
+											<label htmlFor="brand" className="block text-sm font-medium text-gray-700">
 												Marca
 											</label>
 											<input
+												{...register("brand")}
 												type="text"
-												name="first-name"
-												id="first-name"
-												autoComplete="given-name"
+												name="brand"
+												id="brand"
+												autoComplete="brand"
 												className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 											/>
 										</div>
@@ -73,25 +104,24 @@ export const NewProductForm = ({ categories, subcategories }) => {
 												Modelo
 											</label>
 											<input
+												{...register("model")}
 												type="text"
-												name="last-name"
-												id="last-name"
-												autoComplete="family-name"
+												name="model"
+												id="model"
+												autoComplete="family-model"
 												className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 											/>
 										</div>
 										<div className="col-span-6 sm:col-span-3">
-											<label
-												htmlFor="last-name"
-												className="block text-sm font-medium text-gray-700"
-											>
-												Fabricante
+											<label htmlFor="" className="block text-sm font-medium text-gray-700">
+												Nombre Comercial
 											</label>
 											<input
+												{...register("name")}
 												type="text"
-												name="last-name"
-												id="last-name"
-												autoComplete="family-name"
+												name="name"
+												id="name"
+												autoComplete="name"
 												className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 											/>
 										</div>
@@ -107,11 +137,12 @@ export const NewProductForm = ({ categories, subcategories }) => {
 													http://
 												</span>
 												<input
+													{...register("image")}
 													type="text"
-													name="company-website"
-													id="company-website"
+													name="image"
+													id="image"
 													className="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-													placeholder="www.example.com"
+													placeholder="www.example.com/picture.png"
 												/>
 											</div>
 										</div>
@@ -122,8 +153,9 @@ export const NewProductForm = ({ categories, subcategories }) => {
 										</label>
 										<div className="mt-1">
 											<textarea
-												id="about"
-												name="about"
+												{...register("description")}
+												id="description"
+												name="description"
 												rows={3}
 												className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 												placeholder=""

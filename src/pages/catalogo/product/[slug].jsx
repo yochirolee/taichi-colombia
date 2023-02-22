@@ -1,9 +1,7 @@
-import { Navbar } from "@/components";
 import Layout from "@/components/layout/Layout";
 import { ProductDetails } from "@/components/products/ProductDetails";
 import { getAllProductsIds, getProductData } from "@/constants/products_Catalog";
-import Image from "next/image";
-import Link from "next/link";
+
 import { React } from "react";
 
 const Product = ({ productData }) => {

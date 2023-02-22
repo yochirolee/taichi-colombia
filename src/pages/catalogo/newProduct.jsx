@@ -18,8 +18,8 @@ const NewProduct = ({ categories, subCategories }) => {
 };
 
 export async function getStaticProps() {
-	let { data: categories } = await supabase.from("Categories").select("*");
-	let { data: subCategories } = await supabase.from("SubCategories").select("*");
+	let { data: categories } = await supabase.from("categories").select("*");
+	let { data: subCategories } = await supabase.from("subCategories").select("*");
 
 	return {
 		props: {

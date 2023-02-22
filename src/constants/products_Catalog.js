@@ -94,14 +94,15 @@ export const getAllProductsIds = async () => {
 export const getProductData = async (slug) => {
 	let { data: productData } = await supabase
 		.from("products")
-		.select("*,categories(*)")
+		.select("*,categories(*),subCategories(*)")
 		.eq("slug", slug)
 		.single();
 	return productData;
 };
 
 export const getAllProductsData = async () => {
-	let { data: products, error } = await supabase.from("products").select("*,categories(*)");
-	console.log(products, error, "roducts");
+	let { data: products, error } = await supabase
+		.from("products")
+		.select("*,categories(*),subCategories(*)");
 	return products;
 };
