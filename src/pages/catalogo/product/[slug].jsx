@@ -24,10 +24,10 @@ export const getStaticPaths = async () => {
 	};
 };
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
 	const productData = await getProductData(params.slug);
-	
-	console.log(getProductData)
+
+	console.log(getProductData);
 	return {
 		props: {
 			productData,
