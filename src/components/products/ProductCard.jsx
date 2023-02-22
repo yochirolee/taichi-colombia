@@ -3,6 +3,7 @@ import Link from "next/link";
 import { React } from "react";
 
 export const ProductCard = ({ product }) => {
+	if (!product) return <div>No Products</div>;
 	return (
 		<Link href={`/catalogo/product/${product.slug}`} class="group">
 			<div class="aspect-w-1  aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
