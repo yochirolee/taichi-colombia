@@ -25,7 +25,10 @@ const Navbar = () => {
 						className={`font-poppins font-normal cursor-pointer text-[16px] ${
 							active === nav.title ? "text-white" : "text-dimWhite"
 						} ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-						onClick={() => setActive(nav.title)}
+						onClick={() => {
+							setActive(nav.title);
+							setMobileMenuOpen(false);
+						}}
 					>
 						{nav.title}
 					</Link>
@@ -65,17 +68,18 @@ const Navbar = () => {
 					</div>
 					<div className="mt-6  flow-root">
 						<div className="-my-6 divide-y divide-gray-500/10">
-							<div className="space-y-2 py-6">
+							<div className="space-y-2 flex flex-col py-6">
 								{navLinks.map((nav, index) => (
-									<li
+									<Link
 										key={nav.id}
+										href={nav.id}
 										className={`font-poppins font-normal cursor-pointer text-[16px] ${
 											active === nav.title ? "text-white" : "text-dimWhite"
 										} ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
 										onClick={() => setActive(nav.title)}
 									>
-										<a href={`#${nav.id}`}>{nav.title}</a>
-									</li>
+										<span>{nav.title}</span>
+									</Link>
 								))}
 							</div>
 							<div className="py-6 text-white">
