@@ -18,13 +18,10 @@ const Product = ({ productData }) => {
 export const getStaticPaths = async () => {
 	const paths = await getAllProductsIds();
 
-	return {
-		paths,
-		fallback: false,
-	};
+	return { paths, fallback: "blocking" };
 };
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
 	const productData = await getProductData(params.slug);
 
 	console.log(getProductData);
@@ -32,6 +29,7 @@ export async function getServerSideProps({ params }) {
 		props: {
 			productData,
 		},
+		revalidate: 10,
 	};
 }
 export default Product;
