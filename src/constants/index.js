@@ -1,4 +1,4 @@
-import { BsBoxArrowDownRight, BsHeart,BsInstagram,BsFacebook,BsLinkedin } from "react-icons/bs";
+import { BsBoxArrowDownRight, BsHeart, BsInstagram, BsFacebook, BsLinkedin } from "react-icons/bs";
 import {
 	people01,
 	people02,
@@ -18,16 +18,16 @@ import {
 
 export const navLinks = [
 	{
-		id: "home",
+		id: "/",
 		title: "Inicio",
 	},
 	{
-		id: "products",
+		id: "/catalogo",
 		title: "Productos",
 	},
 	{
-		id: "news",
-		title: "Noticias",
+		id: "/catalogo/newProduct",
+		title: "Crear Producto",
 	},
 	{
 		id: "clients",
@@ -129,7 +129,6 @@ export const footerLinks = [
 				name: "Email: taichi-colombia@anabas.co.jp",
 				link: "#",
 			},
-		
 		],
 	},
 	{
@@ -139,17 +138,14 @@ export const footerLinks = [
 				name: "Taichi Holdings SAS",
 				link: "https://www.taichi-holdings.com/es/",
 			},
-			
-			
 		],
 	},
-
 ];
 
 export const socialMedia = [
 	{
 		id: "social-media-1",
-		icon: instagram ,
+		icon: instagram,
 		link: "https://www.instagram.com/taichi.colombia/",
 	},
 	{
