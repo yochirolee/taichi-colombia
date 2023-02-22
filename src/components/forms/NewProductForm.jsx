@@ -63,8 +63,10 @@ export const NewProductForm = ({ categories, subcategories }) => {
 												{...register("subCategoryId")}
 												className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
 											>
-												{subcategories?.map((subcategory) => (
-													<option value={subcategory.subCategoryId}>{subcategory.name}</option>
+												{subcategories?.map((subcategory, index) => (
+													<option value={subcategory.subCategoryId} key={index}>
+														{subcategory.name}
+													</option>
 												))}
 											</select>
 										</div>
@@ -76,8 +78,10 @@ export const NewProductForm = ({ categories, subcategories }) => {
 												{...register("categoryId")}
 												className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
 											>
-												{categories?.map((category) => (
-													<option value={category.categoryId}>{category.categoryName}</option>
+												{categories?.map((category, index) => (
+													<option value={category.categoryId} key={index}>
+														{category.categoryName}
+													</option>
 												))}
 											</select>
 										</div>
