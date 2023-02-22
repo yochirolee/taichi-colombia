@@ -4,7 +4,7 @@ import { footerLinks, socialMedia } from "../constants";
 import Image from "next/image";
 
 const Footer = () => (
-	<section className={`${styles.flexCenter} ${styles.paddingY}  mx-10 flex-col`}>
+	<section className={`${styles.flexCenter} ${styles.paddingY}  mx-6 flex-col`}>
 		<div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
 			<div className="flex-[1] flex flex-col justify-start mr-10 text-center">
 				<Image src={logo} alt="taichi-logo" width={124} height={32} />

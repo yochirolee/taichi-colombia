@@ -1,10 +1,9 @@
-import { Billing, Business, Hero, FeaturedProducts, CardDeal, CTA, Clients } from "@/components";
+import { Billing, Hero, FeaturedProducts, CardDeal, CTA, Clients } from "@/components";
 
 import Head from "next/head";
 import Image from "next/image";
 import { blurCyan } from "public/assets";
 import Layout from "../components/layout/Layout";
-import { FeaturedCard } from "@/components/FeatureCard";
 import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 
@@ -37,7 +36,6 @@ export default function Home() {
 						data-nimg="1"
 						class="absolute left-top top-40 left-10 -m-56 opacity-50"
 					/>
-
 					<Hero />
 					<FeaturedProducts />
 					<Services />

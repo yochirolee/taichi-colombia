@@ -29,7 +29,6 @@ const Catalogo = ({ productsList }) => {
 };
 export async function getServerSideProps() {
 	let productsList = await getAllProductsData();
-	console.log(productsList, "products");
 	return {
 		props: {
 			productsList,
