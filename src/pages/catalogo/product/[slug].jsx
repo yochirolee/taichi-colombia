@@ -24,7 +24,6 @@ export const getStaticPaths = async () => {
 export async function getStaticProps({ params }) {
 	const productData = await getProductData(params.slug);
 
-	console.log(getProductData);
 	return {
 		props: {
 			productData,
