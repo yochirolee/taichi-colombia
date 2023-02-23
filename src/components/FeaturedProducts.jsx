@@ -109,7 +109,7 @@ export const FeaturedProducts = () => {
 			<button
 				onClick={() =>
 					setActiveProduct((prev) => {
-						return prev < 2 ? prev + 1 : prev;
+						return prev < 1 ? prev + 1 : prev;
 					})
 				}
 				type="button"
