@@ -39,8 +39,8 @@ export const ProductsTable = ({ productsList }) => {
 					</tr>
 				</thead>
 				<tbody>
-					{productsList?.map((product) => (
-						<tr className="bg-white border-b  hover:bg-gray-50 ">
+					{productsList?.map((product,index) => (
+						<tr key={index} className="bg-white border-b  hover:bg-gray-50 ">
 							<th
 								scope="row"
 								className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white"
