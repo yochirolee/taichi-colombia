@@ -16,14 +16,16 @@ const NewProduct = ({ categories, subCategories, productsListData }) => {
 				<div className="flex justify-end gap-5">
 					<button
 						onClick={() => setOpen((prev) => !prev)}
-						className="px-4 py-2 border rounded-lg text-sm hover:bg-gray-200"
+						className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
 					>
 						Adicionar Producto
 					</button>
-					<button className="px-4 py-2 border rounded-lg text-sm">Crear Linea</button>
+					<button className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+						Crear Linea
+					</button>
 					<button className="px-4 py-2 border rounded-lg text-sm">Crear Categoria</button>
 				</div>
-				<div className="flex items-center justify-between pb-4 bg-white ">
+				<div className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
 					<label for="table-search" className="sr-only">
 						Buscar
 					</label>

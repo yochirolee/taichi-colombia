@@ -1,10 +1,10 @@
 import { React, useEffect } from "react";
 import Image from "next/image";
+import { logo } from "public/assets";
 
 export const ProductsTable = ({ productsList }) => {
 	return (
 		<div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-			
 			<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 				<thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
 					<tr>
@@ -23,7 +23,7 @@ export const ProductsTable = ({ productsList }) => {
 					</tr>
 				</thead>
 				<tbody>
-					{productsList?.map((product,index) => (
+					{productsList?.map((product, index) => (
 						<tr key={index} className="bg-white border-b  hover:bg-gray-50 ">
 							<th
 								scope="row"
@@ -31,7 +31,7 @@ export const ProductsTable = ({ productsList }) => {
 							>
 								<Image
 									className="w-10 h-10 rounded-full"
-									src={product?.image}
+									src={product.image ? product.image : logo}
 									alt="Image"
 									width={25}
 									height={25}
