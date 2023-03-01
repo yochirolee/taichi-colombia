@@ -29,10 +29,6 @@ export const navLinks = [
 		id: "/catalogo/newProduct",
 		title: "Crear Producto",
 	},
-	{
-		id: "clients",
-		title: "Clientes",
-	},
 ];
 
 export const features = [
