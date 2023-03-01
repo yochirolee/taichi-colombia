@@ -9,6 +9,10 @@ export default function CreateProductModal({
 	setOpen,
 	cancelButtonRef,
 	setProductsList,
+	selectedProduct,
+	setSelectedProduct ,
+	productList,
+	
 }) {
 	return (
 		<Transition.Root show={open} as={Fragment}>
@@ -43,6 +47,9 @@ export default function CreateProductModal({
 									categories={categories}
 									subcategories={subCategories}
 									setProductsList={setProductsList}
+									selectedProduct={selectedProduct}
+									setSelectedProduct={setSelectedProduct}
+									productList={productList}
 								/>
 							</Dialog.Panel>
 						</Transition.Child>

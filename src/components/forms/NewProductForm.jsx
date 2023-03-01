@@ -3,9 +3,11 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const createNewProduct = async (newProduct) => {
+	delete newProduct?.categories;
+	delete newProduct?.subCategories;
 	const { data, error } = await supabase
 		.from("products")
-		.upsert(newProduct, { onConflict: "slug" })
+		.upsert(newProduct, { onConflict: "productId" })
 		.select()
 		.single();
 	return { data, error };
@@ -17,6 +19,9 @@ export const NewProductForm = ({
 	setOpen,
 	cancelButtonRef,
 	setProductsList,
+	selectedProduct,
+	setSelectedProduct,
+	productList,
 }) => {
 	const [isInserting, setIsInserting] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -25,18 +30,31 @@ export const NewProductForm = ({
 		handleSubmit,
 		reset,
 		formState: { errors },
-	} = useForm();
+	} = useForm({ defaultValues: { ...selectedProduct } });
 
 	const onSubmit = async (data) => {
 		setIsInserting((prev) => (prev = true));
 		data.slug = data.name;
-		const { data: createdProduct, error } = await createNewProduct(data);
-		if (error) setIsError((prev) => (prev = false));
 
+		const { data: createdProduct, error } = await createNewProduct(data);
+		if (error) setIsError(error);
+		const elementsIndex = productList.findIndex((prod) => prod.productId == data.productId);
+		if (elementsIndex > -1) {
+			console.log(data, "data");
+			productList[elementsIndex] = data;
+			setProductsList([...productList]);
+		} else {
+			setProductsList((prev) => [...prev, createdProduct]);
+		}
 		setIsInserting((prev) => (prev = false));
-		setProductsList((prev) => [...prev, createdProduct]);
 		setOpen((prev) => !prev);
 		reset();
+	};
+
+	const handleOnClose = () => {
+		reset();
+		setSelectedProduct(null);
+		setOpen((prev) => !prev);
 	};
 
 	return (
@@ -54,6 +72,7 @@ export const NewProductForm = ({
 						</div>
 					</div>
 					<div className="mt-5 md:col-span-2 md:mt-0">
+						{isError ? isError.message : ""}
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="overflow-hidden shadow sm:rounded-md">
 								<div className="bg-white px-4 py-5 sm:p-6">
@@ -202,7 +221,7 @@ export const NewProductForm = ({
 									<button
 										type="button"
 										className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-										onClick={() => setOpen(false)}
+										onClick={() => handleOnClose()}
 										ref={cancelButtonRef}
 									>
 										Cancel

@@ -9,6 +9,7 @@ const NewProduct = ({ categories, subCategories, productsListData }) => {
 	const [open, setOpen] = useState(false);
 	const cancelButtonRef = useRef(null);
 	const [productsList, setProductsList] = useState(productsListData);
+	const [selectedProduct, setSelectectProduct] = useState(null);
 
 	return (
 		<Layout>
@@ -41,7 +42,12 @@ const NewProduct = ({ categories, subCategories, productsListData }) => {
 						/>
 					</div>
 				</div>
-				<ProductsTable productsList={productsList} />
+				<ProductsTable
+					productsList={productsList}
+					setSelectectProduct={setSelectectProduct}
+					setOpen={setOpen}
+					setProductsList={setProductsList}
+				/>
 				<CreateProductModal
 					categories={categories}
 					subCategories={subCategories}
@@ -49,6 +55,9 @@ const NewProduct = ({ categories, subCategories, productsListData }) => {
 					setOpen={setOpen}
 					cancelButtonRef={cancelButtonRef}
 					setProductsList={setProductsList}
+					selectedProduct={selectedProduct}
+					setSelectedProduct={setSelectectProduct}
+					productList={productsList}
 				/>
 			</div>
 		</Layout>
