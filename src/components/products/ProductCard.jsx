@@ -5,7 +5,7 @@ import { React } from "react";
 export const ProductCard = ({ product }) => {
 	if (!product) return <div>No Products</div>;
 	return (
-		<Link href={`/catalogo/product/${product.slug}`} className="group">
+		<Link href={`/catalogo/product/${product.productId}`} className="group">
 			<div className="aspect-w-1  aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
 				<Image
 					src={product.image}

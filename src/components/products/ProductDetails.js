@@ -20,22 +20,26 @@ export const ProductDetails = ({ productData }) => {
 				<h2 className="text-3xl font-bold font-poppins tracking-tight text-white sm:text-4xl">
 					Especificaciones Tecnicas
 				</h2>
-				<p className="mt-4 text-white font-poppins">{productData.model}</p>
+				<p className="mt-4 text-white font-poppins">{productData?.model}</p>
 
 				<dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
 					<div className="border-t border-gray-200 pt-4">
 						<dt className="font-medium text-gray-100">Modelo:</dt>
-						<dd className="mt-2 text-sm text-gray-200">{productData.model}</dd>
+						<dd className="mt-2 text-sm text-gray-200">{productData?.model}</dd>
 					</div>
 
 					<div className="border-t border-gray-200 pt-4">
 						<dt className="font-medium text-gray-100">Categoria</dt>
-						<dd className="mt-2 text-sm text-white">{productData.categories.categoryName}</dd>
+						<dd className="mt-2 text-sm text-white">{productData?.categories?.categoryName}</dd>
 					</div>
 
 					<div className="border-t border-gray-200 pt-4">
 						<dt className="font-medium text-gray-100">Fabricante</dt>
-						<dd className="mt-2 text-sm text-gray-200">{productData.brand}</dd>
+						<dd className="mt-2 text-sm text-gray-200">{productData?.brand}</dd>
+					</div>
+					<div className="border-t border-gray-200 pt-4">
+						<dt className="font-medium text-gray-100">Descripcion</dt>
+						<dd className="mt-2 text-sm text-gray-200">{productData?.description}</dd>
 					</div>
 				</dl>
 			</div>

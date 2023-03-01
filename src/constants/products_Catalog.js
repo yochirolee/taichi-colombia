@@ -85,18 +85,19 @@ export const getAllProductsIds = async () => {
 	return products.map((product) => {
 		return {
 			params: {
-				slug: product.slug,
+				id: product.productId.toString(),
 			},
 		};
 	});
 };
 
-export const getProductData = async (slug) => {
+export const getProductData = async (id) => {
 	let { data: productData } = await supabase
 		.from("products")
 		.select("*,categories(*),subCategories(*)")
-		.eq("slug", slug)
+		.eq("productId", id)
 		.single();
+		console.log(productData,"productData");
 	return productData;
 };
 
