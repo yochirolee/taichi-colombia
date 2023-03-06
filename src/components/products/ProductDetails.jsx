@@ -3,17 +3,18 @@ import Image from "next/image";
 
 export const ProductDetails = ({ productData }) => {
 	return (
-		<div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-			<div className="aspect-w-1  aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+		<div className="mx-auto grid max-w-2xl  grid-cols-1 gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+			<div className=" flex flex-col items-center aspect-w-1 bg-white aspect-h-1 w-full overflow-hidden rounded-lg  xl:aspect-w-7 xl:aspect-h-8">
 				<Image
 					src={productData?.image}
 					placeholder="blur"
 					blurDataURL="https://image-component.nextjs.gallery/placeholder"
 					alt="Product Image"
-					className=" w-full object-scale-down group-hover:opacity-75"
+					className="max-h-96  w-full object-scale-down group-hover:opacity-75"
 					height={500}
 					width={500}
 				/>
+				<button className="border bg-green-50 max-w-42 px-2 m-4 rounded-lg h-12 text-green-500 inset-0 focus:outline-none">Cotizar</button>
 			</div>
 			<div>
 				<h2 className="text-3xl font-bold font-poppins tracking-tight text-white sm:text-4xl">

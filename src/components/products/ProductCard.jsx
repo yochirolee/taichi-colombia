@@ -6,13 +6,13 @@ export const ProductCard = ({ product }) => {
 	if (!product) return <div>No Products</div>;
 	return (
 		<Link href={`/catalogo/product/${product.productId}`} className="group">
-			<div className="aspect-w-1  aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+			<div className=" w-full overflow-hidden rounded-lg bg-transparent xl:aspect-w-7 xl:aspect-h-8">
 				<Image
 					src={product.image}
-					width={500}
-					height={500}
+					width={250}
+					height={250}
 					alt={product.name}
-					className="max-h-72 w-full object-top object-scale-down group-hover:opacity-75"
+					className="max-h-52 min-h-64 w-full  object-scale-down group-hover:opacity-75"
 				/>
 			</div>
 			<p className="mt-1 text-sm text-white rounded-lg p-2 text-center bg-medical ">
